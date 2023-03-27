@@ -1,5 +1,5 @@
-@import url(./vendor/fonts/font.css);
-@import url(./vendor/normalize.css);
+@import url(../../vendor/fonts/font.css);
+@import url(../../vendor/normalize.css);
 
 html{
   scroll-behavior: smooth;
@@ -12,7 +12,7 @@ html{
   color: #FFFFFF
 }
 .topb__bg{
-  background: url(./img/noise_lines.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+  background: url(../../img/noise_lines.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
 }
 .header {
 }
@@ -110,6 +110,7 @@ html{
   letter-spacing: 0.06em;
   border-radius: 100px;
   border: 0;
+  text-decoration: none;
 }
 .button_colored{
   background: #F1CDB3;
@@ -118,6 +119,10 @@ html{
 .button_colored:hover{
   background: #FDDCC4;
   cursor: pointer;
+}
+.not-only__link{
+  color: #292929;
+  text-decoration: none;
 }
 .not-only__img{
 
@@ -143,14 +148,14 @@ html{
   margin: 14px 0 0;
   max-width: 370px;
 }
-.text {
+.about__text {
   font-family: 'Arial';
   font-size: 15px;
   line-height: 24px;
   color: #4C4C4C;
   margin: 25px 0;
 }
-.text:last-child{
+.about__text:last-child{
   margin-bottom: 0;
 }
 .our-friends {
@@ -177,7 +182,7 @@ html{
 
 }
 .our-friends__cards-arrow_left{
-  background-image: url(./img/arrow.svg);
+  background-image: url(../../img/arrow.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: auto;
@@ -189,11 +194,11 @@ html{
   transition: 1s;
 }
 .our-friends__cards-arrow_left:hover{
-  background-image: url(./img/button_arrow_active.png);
+  background-image: url(../../img/button_arrow_active.png);
   cursor: pointer;
 }
 .our-friends__cards-arrow_right{
-  background-image: url(./img/arrow.svg);
+  background-image: url(../../img/arrow.svg);
   transform: rotate(180deg);
   background-position: center;
   background-repeat: no-repeat;
@@ -206,33 +211,10 @@ html{
   transition: 1s; 
 }
 .our-friends__cards-arrow_right:hover{
-  background-image: url(./img/button_arrow_active.png);
+  background-image: url(../../img/button_arrow_active.png);
   cursor: pointer;
   transform: rotate(180deg);
 }
-/* .our-friends__cards:before{
-  content: "";
-  background-image: url(./img/button_arrow.png);
-  transform: rotate(180deg);
-  height: 52px;
-  width: 52px;
-  transition: 1s;
-}
-.our-friends__cards:hover:before{
-  background-image: url(./img/button_arrow_active.png);
-  cursor: pointer;
-  transform: rotate(180deg);
-}
-.our-friends__cards:after{
-  content: "";
-  background-image: url(./img/button_arrow.png);
-  height: 52px;
-  width: 52px;
-}
-.our-friends__cards:hover:after{
-  background-image: url(./img/button_arrow_active.png);
-  cursor: pointer;
-} */
 .our-friends__card {
   max-width: 270px;
   background: #FAFAFA;
@@ -251,6 +233,7 @@ html{
   background: #FDDCC4;
   border: none;
   transition: 1s;
+  cursor: pointer;
 }
 .our-friends__card-img {
 }
@@ -269,6 +252,10 @@ html{
 .our-friends__button-content {
   margin: 0 auto;
   text-align: center;
+}
+.our-friends__link{
+  color: #292929;
+  text-decoration: none;
 }
 .help {
   padding: 80px 0 100px;
@@ -330,9 +317,6 @@ html{
 .in-addition__text-content {
   max-width: 380px;
 }
-.in-addition__content_centr-block{
-  margin-left: -26px;
-}
 .in-addition__title {
   max-width: 300px;
   font-weight: 400;
@@ -383,7 +367,7 @@ html{
   margin: 21px 0 0;
 }
 .footer {
-  background: url(./img/noise_lines.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+  background: url(../../img/noise_lines.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
   padding: 40px 0 0;
 }
 .footer__content {
