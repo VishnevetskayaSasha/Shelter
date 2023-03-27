@@ -8,11 +8,7 @@
   color: #FFFFFF
 }
 .topb__bg{
-  background: url(./img/bg.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
+  background: url(./img/noise_lines.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
 }
 .header {
 }
@@ -76,8 +72,6 @@
 .not-only {
   padding-top: 90px;
 }
-.wrapper {
-}
 .not-only__content {
   display: flex;
   justify-content: space-between;
@@ -100,15 +94,110 @@
   color: #CDCDCD;
   margin: 42px 0;
 }
-.not-only__button{
+.button{
   padding: 15px 45px;
   font-size: 17px;
   line-height: 22px;
   color: #292929;
   letter-spacing: 0.06em;
-  background: #F1CDB3;
   border-radius: 100px;
+  border: 0;
+}
+.button_colored{
+  background: #F1CDB3;
 }
 .not-only__img{
 
+}
+.about {
+
+}
+.about__content {
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 0 100px;
+  padding: 0 175px;
+}
+.about__text-content {
+  max-width: 430px;
+}
+.about__title {
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 45px;
+  letter-spacing: 0.06em;
+  color: #545454;
+  margin: 14px 0 0;
+  max-width: 370px;
+}
+.text {
+  font-family: 'Arial';
+  font-size: 15px;
+  line-height: 24px;
+  color: #4C4C4C;
+  margin: 25px 0;
+}
+.text:last-child{
+  margin-bottom: 0;
+}
+.our-friends {
+  background-color: #F6F6F6;
+  padding: 80px 0 100px;
+}
+.wrapper {
+}
+.our-friends__title {
+  margin: 0 auto;
+  max-width: 400px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 45px;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+.our-friends__cards {
+  margin: 60px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.our-friends__cards:before{
+  content: "";
+  background-image: url(./img/button_arrow.png);
+  transform: rotate(180deg);
+  height: 52px;
+  width: 52px;
+}
+.our-friends__cards:after{
+  content: "";
+  background-image: url(./img/button_arrow.png);
+  height: 52px;
+  width: 52px;
+}
+.our-friends__card {
+  max-width: 270px;
+  background: #FAFAFA;
+  border-radius: 9px;
+  text-align: center;
+  padding-bottom: 30px;
+  margin: 0 35px;
+}
+.our-friends__card-img {
+}
+.our-friends__card-text {
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  color: #545454;
+  margin: 26px 0 27px;
+}
+.button_bordered {
+  border: 2px solid #F1CDB3;
+  border-radius: 100px;
+  background: #FAFAFA;
+}
+.our-friends__button-content {
+  margin: 0 auto;
+  text-align: center;
 }
