@@ -100,7 +100,7 @@ html{
   font-size: 15px;
   line-height: 24px;
   color: #CDCDCD;
-  margin: 42px 0;
+  margin: 42px 0 55px;
 }
 .button{
   padding: 15px 45px;
@@ -160,7 +160,7 @@ html{
 }
 .our-friends {
   background-color: #F6F6F6;
-  padding: 80px 0 100px;
+  padding: 80px 0 115px;
 }
 .our-friends__title {
   margin: 0 auto;
@@ -173,7 +173,7 @@ html{
   color: #545454;
 }
 .our-friends__cards {
-  margin: 60px 0;
+  margin: 60px 0 73px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -221,7 +221,7 @@ html{
   border-radius: 9px;
   text-align: center;
   padding-bottom: 30px;
-  margin: 0 35px;
+  margin: 0 43px;
   transition: 1s;
 }
 .our-friends__card:hover{
@@ -231,7 +231,7 @@ html{
 }
 .our-friends__card:hover button{
   background: #FDDCC4;
-  border: none;
+  border: 2px solid #FDDCC4;
   transition: 1s;
   cursor: pointer;
 }
@@ -248,6 +248,7 @@ html{
   border: 2px solid #F1CDB3;
   border-radius: 100px;
   background: #FAFAFA;
+  transition: 1s;
 }
 .our-friends__button-content {
   margin: 0 auto;
@@ -274,16 +275,11 @@ html{
 }
 .help__blocks {
   display: flex;
-  max-width: 1026px;
+  max-width: 1200px;
   margin: 0 auto;
-}
-.help__blocks_first-line{
-  margin-bottom: 42px;
-  justify-content: space-between;
-
-}
-.help__blocks_second-line{
-  justify-content: space-around;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px 120px;
 }
 .help__block {
   text-align: center;
@@ -331,7 +327,7 @@ html{
   line-height: 17px;
   letter-spacing: 0.06em;
   color: #545454;
-  margin: 20px 0;
+  margin: 18px 0;
 }
 .in-addition__link {
   font-size: 20px;
@@ -368,7 +364,7 @@ html{
 }
 .footer {
   background: url(../../img/noise_lines.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
-  padding: 40px 0 0;
+  padding: 41px 0 0;
 }
 .footer__content {
   display: flex;
@@ -412,4 +408,7 @@ html{
 .footer__text {
 }
 .footer__img {
+}
+.footer__content_centr-block{
+  margin-left: -26px;
 }
