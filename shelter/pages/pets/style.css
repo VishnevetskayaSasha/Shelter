@@ -302,7 +302,6 @@ html{
     justify-content: center;
   }
   .footer__content_centr-block{
-    max-width: 99%;
     margin-top: 40px;
   }
   .footer__content_centr-block .footer__title{
@@ -319,9 +318,7 @@ html{
     margin-top: 41px;
     max-width: 260px;
   }
-
 }
-
 @media screen and (max-width: 767px) {
   .header__menu-content{
     display: none;
@@ -352,7 +349,6 @@ html{
     left: 0;
   } 
 }
-
 @media screen and (max-width: 530px) {
   .header__content{
     padding: 30px 10px;
@@ -369,6 +365,9 @@ html{
   }
   .our-friends__cards{
     margin: 42px 0 12px;
+  }
+  .footer__content_centr-block{
+    max-width: 99%;
   }
 }
 

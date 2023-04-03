@@ -611,7 +611,6 @@ html{
     justify-content: center;
   }
   .footer__content_centr-block{
-    max-width: 99%;
     margin-top: 40px;
   }
   .footer__content_centr-block .footer__title{
@@ -753,5 +752,8 @@ html{
     line-height: 18px;
     text-align: justify;
     padding: 0 10px;
+  }
+  .footer__content_centr-block{
+    max-width: 99%;
   }
 }
