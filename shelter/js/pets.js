@@ -1,4 +1,4 @@
-console.log("Cамооценкa - 100 баллов - работа выполнена четко по ТЗ")
+
 import { PetItem } from "./PetItem.js";
 import { Popup } from "./Popup.js";
 import { PetItemPopup } from "./PetItemPopup.js";
