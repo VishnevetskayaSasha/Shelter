@@ -4,7 +4,12 @@
 html{
   scroll-behavior: smooth;
 }
-
+.lock{
+  overflow: hidden;
+}
+.popup__open {
+  overflow: hidden;
+}
 .page {
   font-family: 'Georgia';
   font-style: normal;
@@ -183,6 +188,8 @@ html{
 }
 .our-friends__cards-box{
   display: flex;
+  width: 1052px;
+  overflow: hidden;
 }
 .our-friends__cards-arrow{
 
@@ -419,14 +426,117 @@ html{
 .footer__content_centr-block{
   margin-left: -26px;
 }
+.overlay{
+  position: fixed;
+  top: 0;
+  left: -1000%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(41, 41, 41, 0.6);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  transition: all .5s;
+}
+.popup {
+  /* position: fixed;
+  top: 0;
+  left: -1000%;
+  width: 100%;
+  height: 100%; */
+  /* background-color: rgba(41, 41, 41, 0.6);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  transition: all .5s; */
+}
+.popup__active{
+  left: 0;
+}
+.popup__wrapper{
+  position: relative;
+}
+.popup__content {
+  position: relative;
+  max-width: 900px;
+  /* box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04); */
+  background: #FAFAFA;
+  border-radius: 9px;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+}
+.popup__img{
+  width: 59.5%;
+  max-width: 500px;
+  border-radius: 9px 0px 0px 9px;
+}
+.popup__text-content {
+  width: 40.5%;
+  padding: 50px 20px 89px 30px;
+}
+.popup__title {
+  font-size: 35px;
+  line-height: 45px;
+  margin: 0;
+  letter-spacing: 0.06em;
+  font-weight: normal;
+}
+.popup__sub-title {
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  margin: 10px 0 40px;
+  font-weight: normal;
+}
+.popup__tetxt {
+  font-size: 15px;
+  line-height: 17px;
+  letter-spacing: 0.06em;
+  margin: 0 0 40px;
+}
+.popup__list {
+  margin: 0;
+  padding-left: 14px;
+}
+.popup__item::marker {
+  color: #F1CDB3;;
+}
+.popup__item {
+  font-size: 15px;
+  line-height: 17px;
+  margin: 0 0 12px;
+  letter-spacing: 0.06em;
+}
+.popup__item:last-child{
+  margin: 0;
+}
+.popup__item-titel {
+  font-weight: bold;
+}
+.popup__close{
+  padding: 20px;
+  border: 2px solid #F1CDB3;
+  border-radius: 100px;
+  position: absolute;
+  top: -52px;
+  right: -43px;
+  transition: all 1s;
+}
+.popup__close:hover{
+  border: 2px solid #F1CDB3;
+  background-color: #F1CDB3;
+  cursor: pointer;
+}
 @media screen and (max-width: 1279px) {
   .our-friends__card{
     margin: 0;
   }
   .our-friends__cards-box{
     gap: 20px;
-    max-width: 80%;
-    overflow: hidden;
   }
   .our-friends__cards{
     gap: 12px;
@@ -451,6 +561,13 @@ html{
   .not-only__content{
     align-items: center;
   }
+  .our-friends__card:nth-last-child(1){
+    display: none;
+  }
+  .our-friends__cards-box {
+    width: 80%;
+    justify-content: space-between;
+  }
   .footer__content{
     flex-wrap: wrap;
     justify-content: space-around;
@@ -463,6 +580,9 @@ html{
   }
 }
 @media screen and (max-width: 1050px){
+  .popup__content{
+    max-width: 700px;
+  }
   .about__content{
     flex-direction: column-reverse;
     padding: 0 139px;
@@ -494,6 +614,35 @@ html{
 @media screen and (max-width: 900px) {
   .wrapper{
     padding: 0 30px;
+  }
+  .popup__img{
+    display: none;
+  }
+  .popup__content{
+    justify-content: center;
+  }
+  .popup__title{
+    text-align: center;
+  }
+  .popup__sub-title{
+    text-align: center;
+    margin: 10px 0 20px;
+  }
+  .popup__tetxt{
+    text-align: justify;
+    margin: 0 0 24px;
+    font-size: 13px;
+    line-height: 14px;
+  }
+  .popup__text-content{
+    width: 220px;
+    padding: 10px;
+  }
+  .popup__item{
+    margin: 0 0 6px;
+  }
+  .popup__close{
+    right: -30px;
   }
   .not-only__content{
     flex-direction: column;
@@ -555,9 +704,6 @@ html{
   .header__menu{
     /* display: none; */
     width: 0;
-  }
-  .lock{
-    overflow: hidden;
   }
   .hamburger{
     display: block;
@@ -641,6 +787,12 @@ html{
   }
   .about__text-content{
     margin: 0 auto;
+  }
+  .our-friends__card:nth-last-child(2){
+    display: none;
+  }
+  .our-friends__cards-box{
+    /* justify-content: center; */
   }
 }
 @media screen and (max-width: 700px){
@@ -740,7 +892,7 @@ html{
   .our-friends__cards-box{
     order: -3;
     max-width: 100%;
-    margin-left: 22px;
+    margin: 0 auto;
   }
   .our-friends{
     padding: 42px 0 57px;
