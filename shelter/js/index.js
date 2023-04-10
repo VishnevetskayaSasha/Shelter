@@ -1,4 +1,4 @@
-console.log("Cамооценкa - 100 баллов - работа выполнена четко по ТЗ")
+alert("Привет! Для ускорения проверки моей работы - слайдер и пагинацию можно не проверять, там все по нулям. Получилось реализовать бургер меню и модалки")
 import { PetItem } from "./PetItem.js";
 import { Popup } from "./Popup.js";
 import { PetItemPopup } from "./PetItemPopup.js";
