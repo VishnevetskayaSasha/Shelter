@@ -2,7 +2,6 @@
 import { PetItem } from "./PetItem.js";
 import { Popup } from "./Popup.js";
 import { PetItemPopup } from "./PetItemPopup.js";
-
 // бургер 
 const hamburger = document.querySelector(".hamburger");
 const menu = document.querySelector(".header__menu");
