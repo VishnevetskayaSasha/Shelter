@@ -55,13 +55,14 @@ export class Popup {
 
   openPopup() {
     document.body.append(this.overlay);
+    document.body.classList.toggle("popup__open")
     
   }
   closePopup(e) {
     let classes = e.target.classList;
     if (classes.contains('overlay') || classes.contains('popup__close')) {
       document.querySelector('.overlay').remove();
-      
+      document.body.classList.remove("popup__open")
     }
   }
 }
