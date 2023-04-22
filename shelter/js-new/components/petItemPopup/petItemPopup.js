@@ -1,4 +1,5 @@
-import { Popup } from "./Popup.js";
+import { Popup } from "../popup/popup.js";
+
 
 //наш новый класс наследуюет класс попап
 export class PetItemPopup extends Popup {
@@ -36,7 +37,7 @@ export class PetItemPopup extends Popup {
                 `
 
     petItem.innerHTML = templete;
-   // console.log(petItem)
+    //console.log(petItem)
     return petItem;
   }
   renderPopup() {

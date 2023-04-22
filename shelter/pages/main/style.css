@@ -203,7 +203,8 @@ html{
   width: 14px;
   border: 2px solid #F1CDB3;
   border-radius: 100px;
-  padding: 23px 19px;
+  padding: 23px 23px;
+  background-color: #F6F6F6;
   transition: 1s;
 }
 .our-friends__cards-arrow_left:hover{
@@ -220,13 +221,36 @@ html{
   width: 14px;
   border: 2px solid #F1CDB3;
   border-radius: 100px;
-  padding: 23px 19px; 
+  padding: 23px 23px; 
+  background-color: #F6F6F6;
   transition: 1s; 
 }
 .our-friends__cards-arrow_right:hover{
   background-image: url(../../img/button_arrow_active.png);
   cursor: pointer;
   transform: rotate(180deg);
+}
+.our-friend__card-conteiner{
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  height: 80%;
+  width: 100%;
+  margin: 0%;
+  padding: 0% 0% 10px;
+  list-style-type: none;
+  transform: translateX(-100%);
+  transition: 1s;
+}
+.our-friend__card-group{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  min-width: 1052px;
 }
 .our-friends__card {
   max-width: 270px;
@@ -235,19 +259,38 @@ html{
   text-align: center;
   padding-bottom: 30px;
   margin: 0 45px;
-  transition: 1s;
 }
 .our-friends__card:hover{
-  background: white;
-  box-shadow: 10px 5px 5px #F1CDB3;
-  cursor: pointer;
+  animation-name: card-animation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes card-animation {
+  from {
+    background: #FAFAFA;
+  }
+  to {
+    background: white;
+    box-shadow: 10px 5px 5px #F1CDB3; 
+    cursor: pointer;  
+  }
+}
+@keyframes button-animation {
+  from {
+    background: #FAFAFA;
+  }
+  to {
+    background: #FDDCC4;
+    border: 2px solid #FDDCC4;
+    cursor: pointer;  
+  }
 }
 .our-friends__card:hover button{
-  background: #FDDCC4;
-  border: 2px solid #FDDCC4;
-  transition: 1s;
-  cursor: pointer;
-}
+  animation-name: button-animation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}   
 .our-friends__card-img {
 }
 .our-friends__card-text {
@@ -261,7 +304,7 @@ html{
   border: 2px solid #F1CDB3;
   border-radius: 100px;
   background: #FAFAFA;
-  transition: 1s;
+  /* transition: 1s; */
 }
 .our-friends__button-content {
   margin: 0 auto;
@@ -270,6 +313,15 @@ html{
 .our-friends__link{
   color: #292929;
   text-decoration: none;
+}
+.animate-left{
+  transform: translateX(-200%);
+}
+.animate-right{
+  transform: translateX(0%);
+}
+.animate-notransition{
+  transition: none;
 }
 .help {
   padding: 80px 0 100px;
@@ -561,9 +613,9 @@ html{
   .not-only__content{
     align-items: center;
   }
-  .our-friends__card:nth-last-child(1){
+  /* .our-friends__card:nth-last-child(1){
     display: none;
-  }
+  } */
   .our-friends__cards-box {
     width: 80%;
     justify-content: space-between;
@@ -788,10 +840,11 @@ html{
   .about__text-content{
     margin: 0 auto;
   }
-  .our-friends__card:nth-last-child(2){
+  /* .our-friends__card:nth-last-child(2){
     display: none;
-  }
+  } */
   .our-friends__cards-box{
+    color: #00000050;
     /* justify-content: center; */
   }
 }

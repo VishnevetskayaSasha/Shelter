@@ -128,6 +128,7 @@ html{
   padding-bottom: 30px;
   transition: 1s;
   margin-bottom: 30px;
+  list-style: none;
 }
 .our-friends__card:hover{
   background: white;
@@ -156,11 +157,7 @@ html{
   box-sizing: border-box;
   transition: 1s;
 }
-.button_bordered:hover{
-  cursor: pointer;
-  background-color: #FDDCC4;
-  border: 2px solid #FDDCC4;
-}
+
 .our-friends__button-content {
   margin: 0 auto;
   display: flex;
@@ -179,15 +176,18 @@ html{
   padding: 15px;
   background-color: #F6F6F6;
 }
-.button_bordered-inactively{
+.button_bordered:disabled{
   color: #CDCDCD;
   border: 2px solid #CDCDCD;
   border-radius: 100px;
 }
-.button_bordered-inactively:hover{
-  cursor: not-allowed;
-  
+
+.button_bordered:not(:disabled):hover {
+  cursor: pointer;
+  background-color: #FDDCC4;
+  border: 2px solid #FDDCC4;
 }
+
 .footer {
   background: url(../../img/noise_lines.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
   padding: 40px 0 0;
@@ -348,7 +348,8 @@ html{
   .our-friends__cards{
     column-gap: 40px;
     justify-content: center;
-    margin: 30px 0 40px
+    margin: 30px 0 40px;
+    padding: 0;
   }
 }
 @media screen and (max-width: 1150px) {
