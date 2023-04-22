@@ -4,7 +4,8 @@
     
  🔥 [Макет в Figma](https://www.figma.com/file/Yk6EnbY63FyG2PJTFkJDMh/shelter?node-id=94-43&t=67Bqur835cMeZtLf-0)  
  ✅ [Деплой сайта](https://vishnevetskayasasha.github.io/Shelter/shelter/pages/pets/index.html)
- 
+
+Финальный код проекта находится в ветке gh-pages
 
 ## Реализованная интерактивность: 
 1. **Бургер меню**
