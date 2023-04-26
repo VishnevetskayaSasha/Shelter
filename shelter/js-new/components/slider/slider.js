@@ -13,30 +13,30 @@ let isRightClick = false;
 let isLeftClick = false;
 let indexVisibleGroup = 2; // всегда виден контейнер со значением 2 
 let deltaOrder = 0;
-let countCard = 3 
+let countCard = 3;
 
-const widthScreenDesk = 1280;
-const widthScreenTablet = 1150;
-const widthScreenMob = 320;
+// const widthScreenDesk = 1280;
+// const widthScreenTablet = 1150;
+// const widthScreenMob = 320;
 
-window.addEventListener("resize", countCardForWidth);
+// window.addEventListener("resize", countCardForWidth);
 
-function countCardForWidth() {
-    if(document.documentElement.clientWidth > (widthScreenDesk)) {
-        countCard = 3
-        console.log(countCard);
-        return countCard;
-    } else if(document.documentElement.clientWidth > (widthScreenTablet)) {
-        countCard = 2
-        console.log(countCard);
-        return countCard;
-    } else {
-        countCard = 1
-        console.log(countCard);
-        return countCard;
-    }
-}
-countCardForWidth()
+// function countCardForWidth() {
+//     if(document.documentElement.clientWidth > (widthScreenDesk)) {
+//         countCard = 3
+//         console.log(countCard);
+//         return countCard;
+//     } else if(document.documentElement.clientWidth > (widthScreenTablet)) {
+//         countCard = 2
+//         console.log(countCard);
+//         return countCard;
+//     } else {
+//         countCard = 1
+//         console.log(countCard);
+//         return countCard;
+//     }
+// }
+// countCardForWidth()
 
 
 function createComponent(PetsJSON) {
@@ -139,10 +139,16 @@ function createComponent(PetsJSON) {
                 }
             }
             // когда нашли следующий контейнер, который нам нужно запонить 
-            while(rightCardGroup.firstElementChild) {
-                // мы его очищаем 
+            // while(rightCardGroup.firstElementChild) {
+            //     // мы его очищаем 
+            //     rightCardGroup.firstElementChild.remove();
+            // }
+            
+            if(rightCardGroup?.firstElementChild) {
                 rightCardGroup.firstElementChild.remove();
             }
+                
+            
             const cardsToShow = getCardsToShow(); // мы получили некий набор карточек 
             visibleCards = new Array(...cardsToShow) // видимые карточки перезаписываются на новые карточки
              // добавляем карточки в новый контейнер 
@@ -204,7 +210,7 @@ function createComponent(PetsJSON) {
             let order = Number(group.style.order);
             order = order + deltaOrder;
             if(order <= 0) {
-                order = countCard;
+                order = 3;
             } else if (order > countCard) {
                 order = 1;
             }
