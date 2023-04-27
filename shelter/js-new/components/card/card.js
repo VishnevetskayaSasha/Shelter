@@ -21,22 +21,23 @@ function createComponent(pet) { // для отдельного питомца с
     name.classList.add("our-friends__card-text");
     name.textContent = pet.name;
 
+    const block = document.createElement("div");
+    block.append(image, name)
+
     // кнопка Learn more
     const button = document.createElement("button");
     button.classList.add("button", "button_bordered");
     button.textContent = textButton;
 
-    component.append(image, name, button)
+    component.append(block, button)
     return component
 }
 function changeComponent(card, pet) {
     const cardInfo = card.firstElementChild;
-    cardInfo.src = pet.img;
-    cardInfo.textContent = pet.name;
+    cardInfo.firstElementChild.src =  pet.img;
+    cardInfo.firstElementChild.alt = pet.name;
+    cardInfo.lastElementChild.textContent = pet.name;
+    card.setAttribute("data-id", pet.id);
 }
-
-
-
-
 
 export { createComponent, changeComponent  }

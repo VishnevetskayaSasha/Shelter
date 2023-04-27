@@ -18,8 +18,6 @@ function createComponent(PetsJSON) {
     const component = document.createElement("div");
     component.classList.add("wrapper");
 
-    //<h2 class="our-friends__title">Our friends who<br>are looking for a house</h2>
-
     const sectionTitle = document.createElement("h2");
     sectionTitle.classList.add("our-friends__title");
     sectionTitle.innerText = "Our friends who\nare looking for a house";
@@ -39,12 +37,12 @@ function createComponent(PetsJSON) {
 
     petsPage.push(PetsJSON);
 
-    for(let i = 1; i < countPage; i +=1) {
+    for(let i = 1; i < countPage; i += 1) {
         const newPetsPage = createRandomPets(petsPage[i - 1].reverse());
         petsPage.push(newPetsPage);
     }
     petsPage[0].forEach((pet) => {
-        const  cardComponent = Card.createComponent(pet);
+        const cardComponent = Card.createComponent(pet);
         showcaseElement.append(cardComponent);
         cardComponents.push(cardComponent);
     });
@@ -58,7 +56,7 @@ function createComponent(PetsJSON) {
 function showPage(number) {
     showcaseElement.style.opacity = "0";
 
-    for( let i = 0; i < cardComponents.length; i++){
+    for( let i = 0; i < cardComponents.length; i +=1){
         Card.changeComponent(cardComponents[i], petsPage[number - 1][i]);
     }
     showcaseElement.style.opacity = "1"
